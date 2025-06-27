@@ -1,0 +1,33 @@
+{
+  "name": "root",
+  "version": "1.0.0",
+  "description": "演示monorepo仓库",
+  "private": true,
+  "engines": {
+    "pnpm": ">= 10.12.1"
+  },
+  "packageManager": "pnpm@10.12.3",
+  "scripts": {
+    "prepare": "husky",
+    "lint": "eslint \"./packages/**/{src,test}/**/*.{vue,ts,tsx,js,mjs,cjs}\"",
+    "dev": "pnpm --dir ./packages/vant dev",
+    "build": "pnpm --dir ./packages/vant build",
+    "build:site": "pnpm --dir ./packages/vant build:site"
+  },
+  "nano-staged": {
+    "*.md": "prettier --write",
+    "*.{ts,tsx,js,vue,less}": "prettier --write",
+    "*.{ts,tsx,js,vue}": "eslint --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "eslint": "^9.29.0",
+    "husky": "^9.1.7",
+    "nano-staged": "^0.8.0",
+    "prettier": "^3.6.1"
+  }
+}

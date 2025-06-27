@@ -1,0 +1,36 @@
+*.log*
+.cache
+.DS_Store
+.idea
+.vscode
+
+# npm
+node_modules
+package-lock.json
+
+# test
+**/test/coverage
+
+# dist file
+es
+lib
+dist
+**/site-dist
+changelog.generated.md
+
+# temp file
+packages/vant/README.md
+
+
+# .vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
